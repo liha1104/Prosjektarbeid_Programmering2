@@ -49,6 +49,6 @@ public class UtilityTest {
     public void IntToHex_Returns_Corectly() {assertThat(Utility.intToHex(2721), is("AA1"));}
 
     @Test
-    public void IntToBit_Returns_Correctly() {assertThat(Utility.intToBit(00000010, is(2)));}
+    public void IntToBit_Returns_Correctly() {assertThat(Utility.intToBit(2), is("00000010"));}
 
 }
