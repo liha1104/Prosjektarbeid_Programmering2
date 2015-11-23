@@ -62,11 +62,27 @@ public class Utility {
         return hex;
     }
 
-    public static void bitwiseAnd() {
+    public static String bitwiseAnd(String first, String second) {
+        String result = "";
+        for (int i = 0; i < 24; i++){
+            if (String.valueOf(first.charAt(i)).equals("1") && String.valueOf(second.charAt(i)).equals("1"))
+                result += "1";
+            else
+                result += "0";
+        }
+        return result;
 
     }
 
-    public static void bitwiseOr() {
+    public static String bitwiseOr(String first, String second) {
+        String result = "";
+        for (int i = 0; i < 24; i++){
+            if (String.valueOf(first.charAt(i)).equals("1") || String.valueOf(second.charAt(i)).equals("1"))
+                result += "1";
+            else
+                result += "0";
+        }
+        return result;
 
     }
 
