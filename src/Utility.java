@@ -19,6 +19,10 @@ public class Utility {
         return result;
     }
 
+    public static String intToBit(int num) {
+
+    }
+
     public static int hexToInt(String hex) {
         char[] numbers = hex.toCharArray();
         if (6 < hex.length())
