@@ -6,23 +6,23 @@ import org.junit.Test;
 public class UtilityTest {
 
     @Test
-    public void nullBitLengthTest() {
-        assertThat(Utility.bitToInt(""), is(0));
+    public void nullBinaryLengthTest() {
+        assertThat(Utility.binaryToInt(""), is(0));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void tooLongBitLengthTest() {
-        Utility.bitToInt("1111111111111111111111111111111111111111111111111111111111111111");
+    public void tooLongBinaryLengthTest() {
+        Utility.binaryToInt("1111111111111111111111111111111111111111111111111111111111111111");
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void bitStringContainsSomethingOtherThan1or0Test() {
-        Utility.bitToInt("23456");
+    public void binaryStringContainsSomethingOtherThan1or0Test() {
+        Utility.binaryToInt("23456");
     }
 
     @Test
-    public void BitToInt_Returns_Correctly() {
-        assertThat(Utility.bitToInt("00001010"), is(10));
+    public void BinaryToInt_Returns_Correctly() {
+        assertThat(Utility.binaryToInt("00001010"), is(10));
     }
 
     @Test
@@ -49,6 +49,6 @@ public class UtilityTest {
     public void IntToHex_Returns_Corectly() {assertThat(Utility.intToHex(2721), is("AA1"));}
 
     @Test
-    public void IntToBit_Returns_Correctly() {assertThat(Utility.intToBit(2), is("00000010"));}
+    public void IntToBinary_Returns_Correctly() {assertThat(Utility.intToBinary(2), is("000000000000000000000010"));}
 
 }

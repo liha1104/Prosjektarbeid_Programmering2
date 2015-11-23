@@ -1,13 +1,13 @@
 
 public class Utility {
 
-    public static int bitToInt(String bit) {
-        char[] numbers = bit.toCharArray();
-        if (24 < bit.length())
+    public static int binaryToInt(String binary) {
+        char[] numbers = binary.toCharArray();
+        if (24 < binary.length())
             throw new IllegalArgumentException("Bit is too long");
-        if (bit == "")
+        if (binary == "")
             return 0;
-        if (!bit.matches("^[0-1_]+$"))
+        if (!binary.matches("^[0-1_]+$"))
             throw new IllegalArgumentException("Bit contains something else than 0 or 1");
 
         Integer result = 0;
@@ -19,8 +19,15 @@ public class Utility {
         return result;
     }
 
-    public static String intToBit(int num) {
+    public static String intToBinary(int num) {
+        String binary = "";
 
+        for ( int i = 0; i < 24; i++) {
+            binary += num % 2;
+            num /= 2;
+        }
+
+        return new StringBuilder(binary).reverse().toString();
     }
 
     public static int hexToInt(String hex) {
