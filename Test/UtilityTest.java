@@ -51,4 +51,14 @@ public class UtilityTest {
     @Test
     public void IntToBinary_Returns_Correctly() {assertThat(Utility.intToBinary(2), is("000000000000000000000010"));}
 
+    @Test
+    public void BitwiseAnd_Returns_Correctly() {
+        assertThat(Utility.bitwiseAnd("000000000000000000000010", "000000000000000000000010"), is("000000000000000000000010"));
+    }
+
+    @Test
+    public void BitwiseOr_Returns_Correctly() {
+        assertThat(Utility.bitwiseOr("000000000000000000000110", "000000000000000000000010"), is("000000000000000000000110"));
+    }
+
 }

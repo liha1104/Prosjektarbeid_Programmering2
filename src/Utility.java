@@ -62,5 +62,13 @@ public class Utility {
         return hex;
     }
 
+    public static void bitwiseAnd() {
+
+    }
+
+    public static void bitwiseOr() {
+
+    }
+
 
 }
