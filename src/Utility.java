@@ -44,8 +44,8 @@ public class Utility {
         if (num == 0) return "0";
         String hex = "";
         while (num > 0) {
-            int digit = num % 16;                // rightmost digit
-            hex = digits.charAt(digit) + hex;  // string concatenation
+            int digit = num % 16;
+            hex = digits.charAt(digit) + hex;
             num = num / 16;
         }
         return hex;
