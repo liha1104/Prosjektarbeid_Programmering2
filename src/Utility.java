@@ -22,7 +22,6 @@ public class Utility {
     public static String intToBinary(int num) {
         String binary = "";
 
-
         for ( int i = 0; i < 24; i++) {
             binary += num % 2;
             num /= 2;

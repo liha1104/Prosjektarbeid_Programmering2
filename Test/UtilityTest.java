@@ -53,7 +53,7 @@ public class UtilityTest {
 
     @Test
     public void BitwiseAnd_Returns_Correctly() {
-        assertThat(Utility.bitwiseAnd("000000000000000000000010", "000000000000000000000010"), is("000000000000000000000010"));
+        assertThat(Utility.bitwiseAnd("000000000000000000000010", "000000000000000000000110"), is("000000000000000000000010"));
     }
 
     @Test
