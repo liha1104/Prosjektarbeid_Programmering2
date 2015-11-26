@@ -46,10 +46,14 @@ public class UtilityTest {
     }
 
     @Test
-    public void IntToHex_Returns_Corectly() {assertThat(Utility.intToHex(2721), is("AA1"));}
+    public void IntToHex_Returns_Corectly() {
+        assertThat(Utility.intToHex(2721), is("AA1"));
+    }
 
     @Test
-    public void IntToBinary_Returns_Correctly() {assertThat(Utility.intToBinary(2), is("000000000000000000000010"));}
+    public void IntToBinary_Returns_Correctly() {
+        assertThat(Utility.intToBinary(2), is("000000000000000000000010"));
+    }
 
     @Test
     public void BitwiseAnd_Returns_Correctly() {

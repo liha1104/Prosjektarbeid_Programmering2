@@ -13,8 +13,10 @@ public class Utility {
         Integer result = 0;
         int count = 0;
         for (int i = numbers.length - 1; i >= 0; i--) {
-            if (numbers[i] == '1') result += (int) Math.pow(2, count);
-            count++;
+            if (numbers[i] == '1') {
+                result = result + (int) Math.pow(2, count);
+                count++;
+            }
         }
         return result;
     }
@@ -22,9 +24,9 @@ public class Utility {
     public static String intToBinary(int num) {
         String binary = "";
 
-        for ( int i = 0; i < 24; i++) {
-            binary += num % 2;
-            num /= 2;
+        for (int i = 0; i < 24; i++) {
+            binary = binary + num % 2;
+            num = num / 2;
         }
 
         return new StringBuilder(binary).reverse().toString();
@@ -44,12 +46,12 @@ public class Utility {
         for (int i = 0; i < hex.length(); i++) {
             char c = hex.charAt(i);
             int d = digits.indexOf(c);
-            val = 16*val + d;
+            val = 16 * val + d;
         }
         return val;
     }
 
-    public static String intToHex(int num){
+    public static String intToHex(int num) {
         String digits = "0123456789ABCDEF";
         if (num == 0) return "0";
         String hex = "";
@@ -63,7 +65,7 @@ public class Utility {
 
     public static String bitwiseAnd(String first, String second) {
         String result = "";
-        for (int i = 0; i < 24; i++){
+        for (int i = 0; i < 24; i++) {
             if (String.valueOf(first.charAt(i)).equals("1") && String.valueOf(second.charAt(i)).equals("1"))
                 result += "1";
             else
@@ -75,7 +77,7 @@ public class Utility {
 
     public static String bitwiseOr(String first, String second) {
         String result = "";
-        for (int i = 0; i < 24; i++){
+        for (int i = 0; i < 24; i++) {
             if (String.valueOf(first.charAt(i)).equals("1") || String.valueOf(second.charAt(i)).equals("1"))
                 result += "1";
             else
