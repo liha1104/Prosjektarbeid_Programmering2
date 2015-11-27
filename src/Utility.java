@@ -3,10 +3,10 @@ public class Utility {
 
     public static int binaryToInt(String binary) {
         char[] numbers = binary.toCharArray();
-        if (24 < binary.length())
-            throw new IllegalArgumentException("Bit is too long");
         if (binary.equals(""))
             return 0;
+        if (24 < binary.length())
+            throw new IllegalArgumentException("Bit is too long");
         if (!binary.matches("^[0-1_]+$"))
             throw new IllegalArgumentException("Bit contains something else than 0 or 1");
 
@@ -33,10 +33,10 @@ public class Utility {
     }
 
     public static int hexToInt(String hex) {
-        if (6 < hex.length())
-            throw new IllegalArgumentException("Hex is too long");
         if (hex.equals(""))
             return 0;
+        if (6 < hex.length())
+            throw new IllegalArgumentException("Hex is too long");
         if (!hex.matches("^[a-fA-F0-9_]+$"))
             throw new IllegalArgumentException("Hex contains something wrong");
 
